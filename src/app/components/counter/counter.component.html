@@ -1,0 +1,9 @@
+<div class='counter-heading'>Welcome to {{title}} !!</div>
+<br>
+<h2>My Counter</h2>
+<div>
+  Count: {{ count$ | async }}
+  <button (click)="actions.increment()">+</button>
+  <button (click)="actions.decrement()">-</button>
+</div>
+
