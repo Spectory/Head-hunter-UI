@@ -25,13 +25,8 @@ export class AjaxService {
   }
 
   static getServerUrl() {
-    // Cache the url
-    // if (!AjaxService.remoteUrlInited) {
-    //   AjaxService.cachedRemoteUrl = _.find(Consts.SERVER_REMOTE_URL, url_hash => url_hash.is_selected).url;
-    //   AjaxService.remoteUrlInited = true;
-    // }
-    // return AjaxService.cachedRemoteUrl;
-    return '';
+    // NOTE: For devs who work only with linux - this should just be localhost
+    return 'http://dev.spectory.com:3000/';
   }
 
   constructor(private http: Http, private router: Router) { }
@@ -53,9 +48,9 @@ export class AjaxService {
 
   /////////////////////// Public /////////////////////////////////////////
   get(partialUrl: string,
-      params: {[key: string]: any} = {},
-      onSuccess: (res: Response) => any,
-      onError?: (err: any) => any ): void {
+    params: {[key: string]: any} = {},
+    onSuccess: (res: Response) => any,
+    onError?: (err: any) => any ): void {
 
     const jwt = localStorage.getItem(AjaxService.JWT_TOKEN)
     if (jwt === null) {

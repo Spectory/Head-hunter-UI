@@ -18,7 +18,8 @@ export class DataService {
 
   constructor(private ajaxService: AjaxService) {
     this.cache = {};
-    this.getUsers = this.ajaxGetWithCache('getUsers', 'https://jsonplaceholder.typicode.com/users');
+    // this.getUsers = this.ajaxGetWithCache('getUsers', 'https://jsonplaceholder.typicode.com/users');
+    this.getUsers = this.ajaxGetWithCache('getUsers', 'get_users');
   }
 
 ///////////////////////////// private methods /////////////////////////
