@@ -1,16 +1,16 @@
 
 export interface ICounterState {
-    count: number
+  count: number
 }
 export const INITIAL_STATE_COUNTER = {
-    count: 0
+  count: 0
 }
 
 export interface IUsersState {
   names: string[]
 }
 export const INITIAL_STATE_USER = {
-    names: []
+  names: []
 }
 
 export interface IAppState {

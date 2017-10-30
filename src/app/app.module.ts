@@ -13,13 +13,15 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component'
 import { CounterComponent } from './components/counter/counter.component'
 
+import { AjaxService } from './services/ajax.service';
+import { DataService } from './services/data.service';
+
 import { CounterActions } from './components/counter/counter.actions';
 import { UsersActions } from './components/users/users.actions';
 import { composeReducers, defaultFormReducer } from '@angular-redux/form';
 
-import { rootReducer } from './app.reducer'
-import { IAppState, INITIAL_STATE } from './app.state'
-
+import { rootReducer } from './app.reducer';
+import { IAppState, INITIAL_STATE } from './app.state';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { IAppState, INITIAL_STATE } from './app.state'
   providers: [
     NgReduxRouter,
     CounterActions,
-    UsersActions
+    UsersActions,
+    AjaxService,
+    DataService
   ],
   bootstrap: [AppComponent]
 })

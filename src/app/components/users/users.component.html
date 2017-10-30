@@ -1,3 +1,4 @@
 <h1>Wecome to {{name}} !!</h1>
 <button (click)="actions.fetchUsers()">Fetch User Names</button>
-<div>These are the users: {{ names$ | async }}</div>
+<!-- <div>These are the users: {{ users$ | async }}</div> -->
+<div *ngFor="let u of users$ | async">{{u.name}}</div>

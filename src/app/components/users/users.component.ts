@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgRedux, select } from '@angular-redux/store';
 import { Observable } from 'rxjs/Observable';
 
@@ -8,10 +8,12 @@ import { UsersActions } from './users.actions';
   selector: 'app-users',
   templateUrl: './users.component.html'
 })
-export class UsersComponent {
-  name = 'UsersComponent'
+export class UsersComponent implements OnInit {
+  name = 'UsersComponent';
 
-  @select(state => state.users.names) readonly names$: Observable<number>;
+  @select(state => state.users.names) readonly users$: Observable<number>;
 
   constructor(private actions: UsersActions) {}
+
+  ngOnInit() {}
 }
