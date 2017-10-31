@@ -26,7 +26,8 @@ export class AjaxService {
 
   static getServerUrl() {
     // NOTE: For devs who work only with linux - this should just be localhost
-    return 'http://dev.spectory.com:3000/';
+    // return 'http://dev.spectory.com:3000/';
+    return 'https://head-hunter.herokuapp.com/';
   }
 
   constructor(private http: Http, private router: Router) { }
