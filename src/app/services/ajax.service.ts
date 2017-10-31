@@ -52,16 +52,19 @@ export class AjaxService {
     params: {[key: string]: any} = {},
     onSuccess: (res: Response) => any,
     onError?: (err: any) => any ): void {
-
+      console.log('get()');
+      console.log('url ? ', partialUrl);
     const jwt = localStorage.getItem(AjaxService.JWT_TOKEN)
-    if (jwt === null) {
-      this.router.navigate(['login'])
-      return
-    }
+    // Uncomment this if using jwt for auth
+    // if (jwt === null) {
+    //   this.router.navigate(['login'])
+    //   return
+    // }
 
-    let token = null
+    const token = null;
     try {
-      token = JSON.parse(jwt)['auth_token']
+      // Uncomment this if using jwt for auth
+      // token = JSON.parse(jwt)['auth_token']
     } catch (ex) {
       console.error('Caught exception while trying to login. Try accessing a V3 server')
       console.exception(ex)
@@ -70,13 +73,18 @@ export class AjaxService {
       'Authorization': 'Bearer ' + token
     });
 
-    const completeUrl = AjaxService.getServerUrl() + partialUrl
+    // const completeUrl = AjaxService.getServerUrl() + partialUrl;
+    const completeUrl = 'https://head-hunter.herokuapp.com/' + partialUrl;
+    // const completeUrl = 'http://dev.spectory.com:3000/' + partialUrl;
+    console.log('completeUrl ? ', completeUrl);
 
     if (onSuccess === undefined || onSuccess === undefined) { throw new Error('Null onSuccess in get()') }
     if (onError === undefined) { onError = this.defaultOnError }
 
     const formattedParams = AjaxService.formatParams(params)
-    this.http.get(completeUrl, {headers: headers, params: formattedParams})
+    // this.http.get(completeUrl, {headers: headers, params: formattedParams})
+    //   .subscribe(onSuccess, onError)
+    this.http.get(completeUrl, {params: formattedParams})
       .subscribe(onSuccess, onError)
   }
 

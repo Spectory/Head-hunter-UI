@@ -11,4 +11,3 @@ export const rootReducer: Reducer<IAppState> = combineReducers<IAppState>({
   users: usersReducer,
   router: routerReducer,
 });
-

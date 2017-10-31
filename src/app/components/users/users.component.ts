@@ -13,7 +13,9 @@ export class UsersComponent implements OnInit {
 
   @select(state => state.users.names) readonly users$: Observable<number>;
 
-  constructor(private actions: UsersActions) {}
+  constructor(private actions: UsersActions) {
+    console.log('UsersComponent inited');
+  }
 
   ngOnInit() {}
 }

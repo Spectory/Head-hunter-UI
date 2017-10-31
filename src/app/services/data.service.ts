@@ -30,20 +30,20 @@ export class DataService {
    * of all of the parameters.
    */
   private ajaxGetWithCache(callName: string, url: string) {
-    // console.log('3');
+    console.log('ajaxGetWithCache()');
     return (params: {[key: string]: any}, successFunc: (data: any) => void) => {
-      const cachekey = this.makeCacheKey(callName, params)
-      const data = this.cache[cachekey]
-      if (data !== undefined) {
-        successFunc( data );
-        return;
-      }
+      // const cachekey = this.makeCacheKey(callName, params)
+      // const data = this.cache[cachekey]
+      // if (data !== undefined) {
+      //   successFunc( data );
+      //   return;
+      // }
 
       this.ajaxService.get(url, params,
         (res: any) => {
           // console.log('Received response: ', res, ' for url: ', url)
           const ret = JSON.parse( res['_body']);
-          this.cache[cachekey] = ret;
+          // this.cache[cachekey] = ret;
           successFunc(ret);
         })
     }

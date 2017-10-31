@@ -10,14 +10,16 @@ import { RouterModule } from '@angular/router';
 import { routes } from './routes';
 
 import { AppComponent } from './app.component';
-import { UsersComponent } from './components/users/users.component'
+
+import { CounterActions } from './components/counter/counter.actions';
 import { CounterComponent } from './components/counter/counter.component'
+
+import { UsersActions } from './components/users/users.actions';
+import { UsersComponent } from './components/users/users.component'
 
 import { AjaxService } from './services/ajax.service';
 import { DataService } from './services/data.service';
 
-import { CounterActions } from './components/counter/counter.actions';
-import { UsersActions } from './components/users/users.actions';
 import { composeReducers, defaultFormReducer } from '@angular-redux/form';
 
 import { rootReducer } from './app.reducer';

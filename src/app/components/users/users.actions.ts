@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { NgRedux } from '@angular-redux/store';
-// import { Http, Response } from '@angular/http'
 import { Action } from 'redux';
 import * as _ from 'lodash'
 
