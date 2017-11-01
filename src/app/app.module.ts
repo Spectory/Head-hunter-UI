@@ -27,6 +27,7 @@ import { IAppState, INITIAL_STATE } from './app.state';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { AddCandidateComponent } from './components/add-candidate/add-candidate.component';
 import { SearchPageComponent } from './components/search-page/search-page.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { SearchPageComponent } from './components/search-page/search-page.compon
     UsersComponent,
     MainPageComponent,
     AddCandidateComponent,
-    SearchPageComponent
+    SearchPageComponent,
+    LoginPageComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
