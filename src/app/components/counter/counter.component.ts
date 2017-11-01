@@ -11,9 +11,18 @@ import { CounterActions } from './counter.actions';
   providers: [CounterActions]
 })
 export class CounterComponent {
+
   title = 'CounterComponent';
+
   @select(state => state.counter.count) readonly count$: Observable<number>;
 
   constructor(private actions: CounterActions) {}
 
+  increment = () => {
+    this.actions.increment();
+  }
+
+  decrement = () => {
+    this.actions.increment();
+  }
 }

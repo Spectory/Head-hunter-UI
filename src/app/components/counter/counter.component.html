@@ -3,7 +3,6 @@
 <h2>My Counter 1</h2>
 <div>
   Count: {{ count$ | async }}
-  <button (click)="actions.increment()">+</button>
-  <button (click)="actions.decrement()">-</button>
+  <button (click)="increment()">+</button>
+  <button (click)="decrement()">-</button>
 </div>
-

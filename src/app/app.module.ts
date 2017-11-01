@@ -24,12 +24,18 @@ import { composeReducers, defaultFormReducer } from '@angular-redux/form';
 
 import { rootReducer } from './app.reducer';
 import { IAppState, INITIAL_STATE } from './app.state';
+import { MainPageComponent } from './components/main-page/main-page.component';
+import { AddCandidateComponent } from './components/add-candidate/add-candidate.component';
+import { SearchPageComponent } from './components/search-page/search-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CounterComponent,
-    UsersComponent
+    UsersComponent,
+    MainPageComponent,
+    AddCandidateComponent,
+    SearchPageComponent
   ],
   imports: [
     RouterModule.forRoot(routes),

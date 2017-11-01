@@ -15,7 +15,7 @@ export const INITIAL_STATE_USER = {
 
 export interface IAppState {
   counter: ICounterState;
-  users: IUsersState
+  users: IUsersState;
   router?: any;
 }
 export const INITIAL_STATE: IAppState = {

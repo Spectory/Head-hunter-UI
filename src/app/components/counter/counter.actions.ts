@@ -13,8 +13,7 @@ export class CounterActions {
   constructor(private ngRedux: NgRedux<ICounterState>) {}
 
   increment(): void {
-    this.ngRedux.dispatch({ type: CounterActions.INCREMENT });
-    setTimeout(this.decrement.bind(this), 2000);
+    this.ngRedux.dispatch({ type: CounterActions.INCREMENT});
   }
 
   decrement(): void {
