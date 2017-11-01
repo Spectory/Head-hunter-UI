@@ -1,0 +1,22 @@
+.search-page-main-wrapper {
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  background: lightblue;
+  .search-input-container {
+    display: inline-block;
+  }
+  .search-button-container {
+    display: inline-block;
+    .search-button {
+      width: 70px;
+      background: antiquewhite;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 10px;
+      cursor: pointer;
+      text-align: center;
+    }
+  }
+}

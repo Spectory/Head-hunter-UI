@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NgReduxModule, NgRedux, DevToolsExtension } from '@angular-redux/store';
 import { NgReduxRouterModule, NgReduxRouter, routerReducer } from '@angular-redux/router';
@@ -29,6 +30,7 @@ import { AddCandidateComponent } from './components/add-candidate/add-candidate.
 import { SearchPageComponent } from './components/search-page/search-page.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +46,8 @@ import { MainPageComponent } from './components/main-page/main-page.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    NgReduxModule
+    NgReduxModule,
+    BrowserAnimationsModule
   ],
   providers: [
     NgReduxRouter,

@@ -1,3 +1,52 @@
-<p>
-  search-page works!
-</p>
+<div class = 'search-page-main-wrapper'>
+  <div class = 'search-input-container'>
+    Search text: <input type="text" [(ngModel)] = "search_text" />
+  </div>
+  <div class = 'search-button-container'>
+    <div class = 'search-button' (click)="searchCandidate()">
+      Search
+    </div>
+  </div>
+  <div class = 'search-data-results'>
+    <div *ngFor="let item of candidate_data">
+      First name: {{item.first_name}}
+      Last name: {{item.last_name}}
+      Email name: {{item.email}}
+    </div>
+  </div>
+  <div>
+    <!-- <mat-table> -->
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- ID Column -->
+<!--     <ng-container matColumnDef="firstName">
+      <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+    </ng-container> -->
+
+    <!-- Progress Column -->
+<!--     <ng-container matColumnDef="progress">
+      <mat-header-cell *matHeaderCellDef> Progress </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.progress}}% </mat-cell>
+    </ng-container> -->
+
+    <!-- Name Column -->
+<!--     <ng-container matColumnDef="userName">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+    </ng-container> -->
+
+    <!-- Color Column -->
+<!--     <ng-container matColumnDef="color">
+      <mat-header-cell *matHeaderCellDef> Color </mat-header-cell>
+      <mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.color}} </mat-cell>
+    </ng-container> -->
+<!-- 
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row> -->
+  <!-- </mat-table> -->
+  </div>
+
+</div>
