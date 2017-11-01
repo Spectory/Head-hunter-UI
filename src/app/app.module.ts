@@ -27,6 +27,7 @@ import { IAppState, INITIAL_STATE } from './app.state';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { AddCandidateComponent } from './components/add-candidate/add-candidate.component';
 import { SearchPageComponent } from './components/search-page/search-page.component';
+import { MainPageFixComponent } from './components/main-page-fix/main-page-fix.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { SearchPageComponent } from './components/search-page/search-page.compon
     UsersComponent,
     MainPageComponent,
     AddCandidateComponent,
-    SearchPageComponent
+    SearchPageComponent,
+    MainPageFixComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
@@ -61,6 +63,5 @@ export class AppModule {
     ngRedux.configureStore(rootReducer, INITIAL_STATE, [], storeEnhancers);
 
     ngReduxRouter.initialize();
-
   }
 }
