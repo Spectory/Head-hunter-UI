@@ -24,20 +24,20 @@ import { composeReducers, defaultFormReducer } from '@angular-redux/form';
 
 import { rootReducer } from './app.reducer';
 import { IAppState, INITIAL_STATE } from './app.state';
-import { MainPageComponent } from './components/main-page/main-page.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { AddCandidateComponent } from './components/add-candidate/add-candidate.component';
 import { SearchPageComponent } from './components/search-page/search-page.component';
-import { MainPageFixComponent } from './components/main-page-fix/main-page-fix.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CounterComponent,
     UsersComponent,
-    MainPageComponent,
+    NavBarComponent,
     AddCandidateComponent,
     SearchPageComponent,
-    MainPageFixComponent
+    MainPageComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
