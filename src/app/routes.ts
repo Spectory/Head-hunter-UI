@@ -5,7 +5,7 @@ import { AddCandidateComponent } from './components/add-candidate/add-candidate.
 import { SearchPageComponent } from './components/search-page/search-page.component';
 
 export const routes = [
-  { path: '', redirectTo: '/counter', pathMatch: 'full' },
+  { path: '', redirectTo: '/main_page', pathMatch: 'full' },
   { path: 'counter', component: CounterComponent },
   { path: 'users', component: UsersComponent },
   { path: 'main_page', component: MainPageComponent },
